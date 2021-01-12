@@ -1,0 +1,14 @@
+#####about Zip application
+
+ p = [[1,2,3],[4,5,6]]
+
+If I do :
+
+>>>d=zip(p)
+>>>list(d)
+[([1, 2, 3],), ([4, 5, 6],)]
+Though, what I actually want is obtained using this:
+
+>>>d=zip(*p)
+>>>list(d)
+[(1, 4), (2, 5), (3, 6)]
