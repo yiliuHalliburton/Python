@@ -1,18 +1,18 @@
 ########Dictionary: value is a list
 
 #####Method 1
-1) 
+#1)
 from collections import defaultdict
 item_ratings = defaultdict(list)
 item_ratings[item].append(review.stars)
 
-2)Use setdefault() method
+#2)Use setdefault() method
 tem_ratings = {}
 item_ratings.setdefault(item,[]).append(review.stars)
 
 ########diction sort
 # Calculate the mean ratings for each menu item as a dictionary
-mean_ratings = {item: sum(ratings)/len(ratings) for item, ratings in item_ratings.items()}
+mean_ratings = {item: sum(ratings)/len(ratings) #for item, ratings in item_ratings.items()}
 
 # Find the worst item, and write it as a string in worst_item. This can be multiple lines of code if you want.
 worst_item = sorted(mean_ratings, key=mean_ratings.get)[0] #if get funtion for the values is not there, then the order will be the keys

@@ -55,3 +55,24 @@ plt.imshow(tf.squeeze(image_detect))
 plt.axis('off')
 plt.title('Detect')
 plt.show();
+
+
+##################subplot use .flat for plots on several rows.
+# View some examples from the dataset
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+import tensorflow as tf
+
+fig, axes = plt.subplots(3, 3, figsize=(8, 8))
+fig.subplots_adjust(hspace=0.2, wspace=0.1)
+
+for i, (elem, ax) in enumerate(zip(kmnist_train, axes.flat)):
+    image = tf.squeeze(elem['image'])
+    label = elem['label']
+
+    ax.imshow(image, cmap='gray')
+    ax.text(0.7, -0.12, f'Digit = {label}', ha='right',
+            transform=ax.transAxes, color='black')
+    ax.set_xticks([])
+    ax.set_yticks([])
