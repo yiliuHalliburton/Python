@@ -16,3 +16,10 @@ mean_ratings = {item: sum(ratings)/len(ratings) #for item, ratings in item_ratin
 
 # Find the worst item, and write it as a string in worst_item. This can be multiple lines of code if you want.
 worst_item = sorted(mean_ratings, key=mean_ratings.get)[0] #if get funtion for the values is not there, then the order will be the keys
+
+##### comprehension for reverse dictionary
+print(imdb_word_index['the'])
+inv_imdb_word_index={value:key for key, value in imdb_word_index.items()}
+print(inv_imdb_word_index[4])
+sentense0=[inv_imdb_word_index[k] for k in x_train[0] if k>index_from] ###very important for "if" statement, preventing errors
+print(sentense0)
