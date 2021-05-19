@@ -1,0 +1,10 @@
+#Using twin axes
+fig, ax=plt.subplots()
+ax.plt(climate_change.index, climate_change['co2']
+ax.set_xlabel('Time')
+ax.set_ylabel('  co2')
+ax2=ax.twinx() #Same x
+ax2.plot(climate_change.index, climate_change['relative_temp']
+ax2.set_y_label('Relative temperature (C)')
+plt.show()
+
