@@ -26,3 +26,10 @@ plot_timeseries(ax, climate_change.index, climate_change['co2'], 'blue', 'time',
 ax2=ax.twinx()
 plot_timeseries(ax, ....)
 plt.show()
+
+#### Annotation
+fig, ax = plt.subplots()
+# Plot the relative temperature data
+ax.plot(climate_change.index, climate_change['relative_temp'])
+# Annotate the date at which temperatures exceeded 1 degree
+ax.annotate('>1 degree', xy=((pd.Timestamp('2015-10-06'), 1))) #xy is position of point, (optional)xytext is position of text'>1 degree'
