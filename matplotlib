@@ -33,3 +33,5 @@ fig, ax = plt.subplots()
 ax.plot(climate_change.index, climate_change['relative_temp'])
 # Annotate the date at which temperatures exceeded 1 degree
 ax.annotate('>1 degree', xy=((pd.Timestamp('2015-10-06'), 1))) #xy is position of point, (optional)xytext is position of text'>1 degree'
+#annotation with style.
+ax.annotate(">1 degree", xytext=((pd.Timestamp('2008-10-06'), -0.2)), xy=((pd.Timestamp('2015-10-06'), 1)), arrowprops=dict(arrowstyle='->', color='gray'))
