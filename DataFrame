@@ -18,6 +18,9 @@ df.loc[1].age
 #change one cell value
 data.at[59,'HHP_maD']=0
 
+#remove the outlier, which can be many cells 
+data.at[data[data.HHP_maD>100].index, 'HHP_maD']=0
+
 #Read file
 w_reviews=pd.read_csv("...   ")
 w_reviews.shape
