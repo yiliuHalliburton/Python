@@ -9,6 +9,10 @@ A=pd.DataFrame({'Yes': [50,21], 'No':[131,2]}, index=['Prod A','Prod B'])
 
 #Create Series
 As=pd.Series([1,2,3],index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A)
+As.index #index
+
+#change one cell value
+data.at[59,'HHP_maD']=0
 
 #Read file
 w_reviews=pd.read_csv("...   ")
