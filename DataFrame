@@ -11,6 +11,10 @@ A=pd.DataFrame({'Yes': [50,21], 'No':[131,2]}, index=['Prod A','Prod B'])
 As=pd.Series([1,2,3],index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A)
 As.index #index
 
+#get one cell
+df.loc[1].at['age']
+df.loc[1].age
+
 #change one cell value
 data.at[59,'HHP_maD']=0
 
