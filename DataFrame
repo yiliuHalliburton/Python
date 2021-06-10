@@ -15,6 +15,9 @@ As.index #index
 df.loc[1].at['age']
 df.loc[1].age
 
+#get last cell
+df['time'].iloc[-1] # df.time[-1] does not work
+
 #change one cell value
 data.at[59,'HHP_maD']=0
 
