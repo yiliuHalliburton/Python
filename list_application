@@ -12,3 +12,7 @@ Though, what I actually want is obtained using this:
 >>>d=zip(*p)
 >>>list(d)
 [(1, 4), (2, 5), (3, 6)]
+
+** list to array
+asset_list.sort()
+asset_list_np=np.array(asset_list)
