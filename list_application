@@ -16,3 +16,6 @@ Though, what I actually want is obtained using this:
 ** list to array
 asset_list.sort()
 asset_list_np=np.array(asset_list)
+
+*remove element
+asset_list.pop(-1)
