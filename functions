@@ -1,0 +1,11 @@
+#import functions from functions.py
+
+import sys
+sys.path.append('C:/Users/...') #directory of functions.py
+import importlib
+try:
+    importlib.reload(functions)
+except:
+    pass
+from functions import load_file
+from functions import get_assetfiles
