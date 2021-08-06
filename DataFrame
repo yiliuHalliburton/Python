@@ -124,4 +124,5 @@ right = british_youtube.set_index(['title', 'trending_date'])
 
 left.join(right, lsuffix='_CAN', rsuffix='_UK')
 
-
+#unxtime to datetime
+df['datetime']=pd.to_datetime(df['unxtime'], unix='s') #(unit ='s' for 10 digits unxtime)
