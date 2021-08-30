@@ -126,3 +126,9 @@ left.join(right, lsuffix='_CAN', rsuffix='_UK')
 
 #unxtime to datetime
 df['datetime']=pd.to_datetime(df['unxtime'], unix='s') #(unit ='s' for 10 digits unxtime)
+
+#rolling
+data.loc[:, column+'_ma']=data[column].fillna(0).rolling(ma_size, min_periods=1).mean() #where na to fill 0, min_periods prevent na in the beginning
+
+#differential
+data[column+'_diff']=data[column].diff(periods=1) #for 1 step differential signal
