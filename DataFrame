@@ -1,7 +1,7 @@
 #create from columns:
 file_columns=['id', 'month_start','month_end', 'day_start']
 data_out=['ddaf',5,5,5]
-data_output=pd.DataFrame(data_out, columns=file_columns)
+data_output=pd.DataFrame([data_out], columns=file_columns)
 
 # Create a dataFrame
 import pandas as pd
