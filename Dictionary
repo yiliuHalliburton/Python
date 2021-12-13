@@ -23,3 +23,9 @@ inv_imdb_word_index={value:key for key, value in imdb_word_index.items()}
 print(inv_imdb_word_index[4])
 sentense0=[inv_imdb_word_index[k] for k in x_train[0] if k>index_from] ###very important for "if" statement, preventing errors
 print(sentense0)
+
+
+###list of keys
+dic.keys()
+###list of values
+dic.values()
